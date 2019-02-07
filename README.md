@@ -1,25 +1,28 @@
 /*
-	++ 写在变量前面，和写在变量后面的区别
-	a = 1
-	a++
-	++a
-	符号写在前面，还是后面，在变量自己独立计算的时候，没有区别
-	
-	但是变量，要是参与了其他运算,有区别了
-	
-	j=i++ ++后运算，先将i的值，赋值给j，i自己再++
-	n=++m ++先运算，变量n++ 6 变量赋值给n
+	赋值运算符，
+	=
+	+= -= *= /= %=
 */
-public class Operator_1{
+public class Operator_2{
 	public static void main(String[] args){
-		int i = 5;
-		int j = i++;
-		System.out.println(i); //6
-		System.out.println(j); //5
+		//赋值运算符，将右面的值，赋值给左边的变量
+		int i = 3;
+		i = i + 3;
+		System.out.println(i);
 		
-		int m = 5;
-		int n = ++m;
-		System.out.println(n);
-		System.out.println(m);
+		// += 赋值运算符 i+=3 i=i+3
+		int j = 5;
+		j+=6; //j=j+6
+		System.out.println(j);
+		
+		//%= m=10 m%=5 m=m%5 10%5=0
+		
+		byte b = 1;
+		b = (byte)(b + 1);
+		System.out.println(b);
+		
+		byte b1=1;
+		b1+=1;  //等同(byte)(b + 1)
+		System.out.println(b1);
 	}
 }
