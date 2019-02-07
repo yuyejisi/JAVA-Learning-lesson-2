@@ -1,21 +1,33 @@
 /*
-	比较运算符，计算结果只有2个可能，true，false
-	结算结果的数据类型，boolean类型
-	== 比较符号两边的数据
-	!= 比较符号两边的数据
-	>  比较符号两边的数据
-	<  比较符号两边的数据
-	>= 比较符号两边的数据
-	<= 比较符号两边的数据
+	逻辑运算符，对两个boolean类型数据之间进行计算
+	结果也是boolean类型
+	
+	& ：一边是false,运算结果就是false,见了false,就是false
+	| ：一边是true,运算结果就是true,见了true,就是true
+	^ ：两边相同为false,不同为true
+	! ：取反 !true=false !false=true            常用
+	&& ：短路与 ,一边是false,另一边不运行       常用
+	|| ：短路或 ,一边是true,另一边不运行        常用
 */
-public class Operator_3{
+public class Operator_4{
 	public static void main(String[] args){
-		//赋值运算符，将右面的值，赋值给左边的变量
+		System.out.println( true & true );
+		System.out.println( true & false );
+		System.out.println( true | false );
+		System.out.println( false | false );
+		System.out.println( false ^ true ); //T
+		System.out.println( false ^ false ); //F
+		System.out.println( true ^ true ); //F
+		
+		System.out.println( !true ); 
+		System.out.println("----------------------");
 		int i = 3;
 		int j = 4;
-		System.out.println(i=j);
-		System.out.println(i==j);
-		System.out.println(2==1);
-		System.out.println(2!=1);
+		System.out.println(3>4 && ++j>2);
+		System.out.println(i);
+		System.out.println(j);
+		System.out.println(3==3 || ++j>2);
+		System.out.println(i);
+		System.out.println(j);
 	}
 }
