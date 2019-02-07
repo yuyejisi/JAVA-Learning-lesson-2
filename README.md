@@ -1,42 +1,25 @@
 /*
-	算术运算符
-	+ 加法，连接
-	- 减法
-	* 乘法
-	/ 除法
-	% 取模，获取余数
-	++ 自增1
-	-- 自减1
+	++ 写在变量前面，和写在变量后面的区别
+	a = 1
+	a++
+	++a
+	符号写在前面，还是后面，在变量自己独立计算的时候，没有区别
+	
+	但是变量，要是参与了其他运算,有区别了
+	
+	j=i++ ++后运算，先将i的值，赋值给j，i自己再++
+	n=++m ++先运算，变量n++ 6 变量赋值给n
 */
-public class Operator{
+public class Operator_1{
 	public static void main(String[] args){
-		// + 连接作用，将一个字符串和其他数据连接起来
-		// + 遇到字符串，变成连接符号"5+5=55"
-		// + 任何类型只要和字符串+，所有的数据都变成字符串 1+"" 1
-		System.out.println("5+5="+5+5);
+		int i = 5;
+		int j = i++;
+		System.out.println(i); //6
+		System.out.println(j); //5
 		
-		//除法运算
-		int i = 100;
-		int j = 9;
-		System.out.println(i/j);
-		
-		//取模运算。两个数相除，获取的是余数
-		int k = 6;
-		int m = 2;
-		int n = 4;
-		System.out.println(k%m);
-		System.out.println(k%n);
-		
-		//自增运算 ++
-		int a = 3;
-		int b = 4;
-		
-		a++; //变量a自己增加1
-		System.out.println(a);
-		
-		++b;
-		System.out.println(b);
-		
-		
+		int m = 5;
+		int n = ++m;
+		System.out.println(n);
+		System.out.println(m);
 	}
 }
